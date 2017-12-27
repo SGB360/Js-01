@@ -1,0 +1,152 @@
+<! doctype html>
+<html>
+	<head>
+				<title>Dieffrent types of oprators,statements and expressions </title>
+	<script type="text/javascript">
+	/*		var sam = 100;
+			    ram = 5;
+			    shyam = sam / ram;
+                shiv = 18;		
+			if (shyam == 20) {
+			shyam = "Right Answer";
+			}
+			//	return;
+			
+			   // alert(shyam);
+		document.getElementById("result").innerHTML = shyam;
+		document.write(shyam);*/
+		var tam;
+		var thirdvalue;
+		var mlt;
+		var fV;
+		var add;
+		var sv;
+		function subtraction(){
+			
+		var firstValue = document.getElementById('firstvalue').value;
+		var secondValue = document.getElementById('secondValue').value;
+		/*	console.log(firstValue);
+			console.log(secondValue);
+			if(firstValue > secondValue)
+			{
+				tam = firstValue - secondValue;
+				console.log("irst");
+			}
+			else 
+			{
+				tam = secondValue - firstValue;
+				console.log("sec");
+			}
+			console.log(tam);
+		}*/
+			
+				
+			if (firstValue.length == 0){
+			alert ('Please enter First value !');
+				return;
+			}
+			
+		
+			
+			if (secondValue.length == 0) {
+				alert ('Please enter Second Value !')
+				return;
+			}
+			if (firstValue.length !== secondValue.length){
+			alert('Please enter both Value in same digit !');
+				return;
+			}
+			console.log('firstValue:-'+firstValue+'--secondValue:-'+secondValue);
+			if(firstValue > secondValue){
+				console.log('first condition');
+				tam = firstValue - secondValue ;
+			}
+			else{
+				console.log('second condition');
+				tam = secondValue - firstValue;
+			}
+			var shyam = document.getElementById('result');
+			shyam.innerHTML = "Subtraction = " + tam;
+			
+				if (tam % 2 == 0){
+					alert('Even Number');
+					}
+				else if (tam % 3 == 0){
+					alert('Odd Number');
+					}
+					else {
+					alert('Prime Number');
+					}
+		       document.getElementById('thirdvalue').value = tam;
+               }
+		 function nextresult() 
+		{
+			 var thirdvalue = document.getElementById('thirdvalue').value ;
+                        console.log(thirdvalue);
+			 var fourthvalue = document.getElementById('fourthvalue').value;
+			 if (fourthvalue == 0){
+			 alert ('Please enter fourth value !');
+				 return;
+			 }
+			        console.log(fourthvalue);
+				 var mlt = thirdvalue * fourthvalue;
+				       // alert(c);
+			 	if (mlt % 2 == 0){
+					alert('Even Number');
+					}
+				else if (mlt % 3 == 0){
+					alert('Odd Number');
+					}
+					else {
+					alert('Prime Number');
+					}
+			 var shiv = document.getElementById('final');
+			 shiv.innerHTML = "Multiplication = " + mlt;
+                        console.log(mlt);
+			 		 document.getElementById('fvalue').value = mlt;
+			 		// console.log('from multi', mlt);
+
+       }
+		 function Addition()
+		{
+		  var fV = document.getElementById('fvalue').value;
+			// console.log(mlt);
+		 var sv = document.getElementById('svalue').value;
+			 console.log(sv);
+			 if (sv == null){
+			 alert('Please enter value!');
+				 return;
+				 			 console.log(sv);
+			 }
+				 var add = Number(sv) + Number(fV);
+				 console.log(add);
+
+			document.getElementById('add').innerHTML ="Addition = " + add ;
+			 		}
+		
+		</script>
+				</head>
+					<body>
+		                                  <h1> Subtraction </h1>
+			                 <b>  FirstValue:</b><input type="number" id="firstvalue">
+		                     <b> SecondValue:</b><input type="number" id="secondValue">
+		                                  <input type="submit" value="Answer" onclick="subtraction()">
+						                  <p id="result"><i>Here is the Subtraction</i></p>
+					</body>			
+		<body>			
+			                              <h1>Multiplication</h1>
+				             <b>  ThirdValue:</b><input type="number" id="thirdvalue">
+		                     <b> FourthValue:</b><input type="number" id="fourthvalue">
+		                                  <input type="submit" value="Answer" onclick="nextresult()">
+			                              <p id="final"><i> Here is multiplication</i> </p>
+	            </body>
+	    <body>
+			                               <h1> Addition </h1>
+			                  <b> FifthValue:</b><input type = "number" id = "fvalue">
+			                  <b> SixthValue:</b><input type = "number" id = "svalue">
+			                              <input type = "submit" value = "Answer" onclick = "Addition()">
+			                               <p id = "add"><i> Here is the Addition </i> </p>
+	                                      
+	   </body>
+	
+</html>
