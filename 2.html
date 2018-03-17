@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Homework Day 2</title>
+    <style>
+      td {
+         border: 1px solid black;
+      }
+    </style>
+  </head>
+    <body>
+      <form>
+        First name: <br>
+        <input type="text" id='firstname'>
+        <br>
+        Email: <br>
+        <input type="email" id="mail">
+        <br>
+        DOB: <br>
+        <input type="date" id="calendar">
+        <br>
+        Address: <br>
+        <input type="text" id="address">
+        <br>
+
+        <button type="button" onclick="doShit()">Add Entry</button>
+
+      </form>
+        <br>
+
+      <script>
+        var table = document.createElement('table');
+        function doShit() {
+
+          var tr = document.createElement('tr');
+          var td1 = document.createElement('td');
+          var td2 = document.createElement('td');
+          var td3 = document.createElement('td');
+          var td4 = document.createElement('td');
+          var td5 = document.createElement('BUTTON', onclick='removeShit()');
+
+
+          var text1 = document.createTextNode(document.getElementById('firstname').value);
+          var text2 = document.createTextNode(document.getElementById('mail').value);
+          var text3 = document.createTextNode(document.getElementById('calendar').value);
+          var text4 = document.createTextNode(document.getElementById('address').value);
+          var text5 = document.createTextNode('Remove');
+
+
+
+
+          td1.appendChild(text1);
+          td2.appendChild(text2);
+          td3.appendChild(text3);
+          td4.appendChild(text4);
+          td5.appendChild(text5);
+          tr.appendChild(td1);
+          tr.appendChild(td2);
+          tr.appendChild(td3);
+          tr.appendChild(td4);
+          tr.appendChild(td5);
+
+          table.appendChild(tr);
+        }
+
+        document.body.appendChild(table);
+      </script>
+    </body>
+</html>
